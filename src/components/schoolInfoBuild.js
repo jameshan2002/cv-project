@@ -74,7 +74,7 @@ class schoolInfoBuild extends React.Component {
             value={schoolInfoInput.titleOfStudy}
             name="titleOfStudy"
             type="text"
-            placeholder="Title of study"
+            placeholder="Title Of Study"
             id="titleOfStudy"
           />
           <br />

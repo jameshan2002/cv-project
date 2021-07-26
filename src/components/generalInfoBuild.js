@@ -23,11 +23,15 @@ class generalInfoBuild extends React.Component {
     });
   };
 
+  onSubmitTask = (e) => {
+    e.preventDefault();
+  };
+
   render() {
     const { generalInfo } = this.state;
     return (
       <div>
-        <form>
+        <form onSubmit={this.onSubmitTask}>
           <input
             onChange={this.handleChange}
             value={generalInfo.firstName}
@@ -56,6 +60,8 @@ class generalInfoBuild extends React.Component {
             placeholder="Email"
             id="email"
           />
+          <br />
+          <button type="submit">Add</button>
         </form>
 
         <h1>{generalInfo.firstName}</h1>

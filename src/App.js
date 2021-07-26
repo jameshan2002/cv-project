@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GeneralInfoBuild from "./components/generalInfoBuild";
 import SchoolInfoBuild from "./components/schoolInfoBuild";
+import CompanyInfoBuild from "./components/companyInfoBuild";
 
 class App extends Component {
   render() {
@@ -11,6 +12,8 @@ class App extends Component {
         <GeneralInfoBuild />
         <h4>School Information</h4>
         <SchoolInfoBuild />
+        <h4>Company Information</h4>
+        <CompanyInfoBuild />
       </div>
     );
   }
