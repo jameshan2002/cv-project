@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import GeneralSection from "./components/generalSection";
-import EducationSection from "./components/educationSection";
-import ExperienceSection from "./components/experienceSection";
+import GeneralInfoBuild from "./components/generalInfoBuild";
+import SchoolInfoBuild from "./components/schoolInfoBuild";
 
 class App extends Component {
   render() {
     return (
       <div>
         <h2>CV-Builder</h2>
-        <GeneralSection />
-        <EducationSection />
-        <ExperienceSection />
+        <h4>General Information</h4>
+        <GeneralInfoBuild />
+        <h4>School Information</h4>
+        <SchoolInfoBuild />
       </div>
     );
   }
