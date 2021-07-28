@@ -1,3 +1,9 @@
 # CV-Project
 
-Making a small CV application using react JS.
+Making a CV application using react JS.
+
+What is used
+- React JS
+- Bootstrap
+- npm
+- git
