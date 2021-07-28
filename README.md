@@ -6,7 +6,7 @@ It was finalized by using Bootstrap to give a visualization of the application.
 
 
 
-# What is used
+### What is used
 - React JS
 - Bootstrap
 - npm
@@ -14,5 +14,5 @@ It was finalized by using Bootstrap to give a visualization of the application.
 
 
 
-# What I have learned
+### What I have learned
 It was really hard for me to implement props and state in different situation. I have learned how to use bootstrap which helped me a lot. It could be better by adding editing function and more, but I feel like I need to learn more to implement those.
