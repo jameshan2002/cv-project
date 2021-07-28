@@ -4,7 +4,7 @@ A CV application using react JS.
 I made this application has been made to practice props and state and how it is implemented in React JS.
 It was finalized by using Bootstrap to give a visualization of the application.
 
-Demo Here!
+ - [Check Demo](https://jameshan2002.github.io/cv-project/)
 
 
 ### What was used
