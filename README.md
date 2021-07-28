@@ -4,11 +4,14 @@ A CV application using react JS.
 I made this application has been made to practice props and state and how it is implemented in React JS.
 It was finalized by using Bootstrap to give a visualization of the application.
 
-What is used
+
+
+# What is used
 - React JS
 - Bootstrap
 - npm
 - git
+
 
 
 # What I have learned
