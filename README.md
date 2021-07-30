@@ -6,6 +6,8 @@ It was finalized by using Bootstrap to give a visualization of the application.
 
  - [Check Demo](https://jameshan2002.github.io/cv-project/)
 
+![image](https://user-images.githubusercontent.com/77949696/127424944-30ba702a-37b2-4106-953b-af40d7310a43.png)
+
 
 ### What was used
 - React JS
