@@ -41,7 +41,7 @@ class generalInfoBuild extends React.Component {
     const generalForm = (
       <Form onSubmit={this.onSubmitTask}>
         <Row className="mb-3">
-          <Form.Group as={Col} md="4" controlId="validationCustom01">
+          <Form.Group as={Col} md="4">
             <Form.Label>First name</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -53,7 +53,7 @@ class generalInfoBuild extends React.Component {
               required
             />
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="validationCustom02">
+          <Form.Group as={Col} md="4">
             <Form.Label>Last name</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -65,7 +65,7 @@ class generalInfoBuild extends React.Component {
               required
             />
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="formBasicEmail">
+          <Form.Group as={Col} md="4">
             <Form.Label>Email address</Form.Label>
             <Form.Control
               onChange={this.handleChange}
