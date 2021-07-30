@@ -11,6 +11,16 @@ const Items = (props) => {
         <h5>{schoolInfo.schoolName}</h5>
         <p>{schoolInfo.titleOfStudy}</p>
         <p>{schoolInfo.dateOfStudy}</p>
+        {/* <Button size="sm" variant="secondary" className="closeButton">
+          Edit
+        </Button> */}
+        <Button
+          size="sm"
+          variant="danger"
+          onClick={() => props.onDelete(schoolInfo.id)}
+        >
+          Delete
+        </Button>
       </div>
     );
   });
@@ -43,6 +53,11 @@ class schoolInfoBuild extends React.Component {
     });
   };
 
+  handleDelete = (itemId) => {
+    const items = this.state.schoolInfo.filter((item) => item.id !== itemId);
+    this.setState({ schoolInfo: items });
+  };
+
   onSubmitTask = (e) => {
     e.preventDefault();
     this.setState((prevState) => ({
@@ -69,7 +84,7 @@ class schoolInfoBuild extends React.Component {
     const schoolForm = (
       <Form onSubmit={this.onSubmitTask}>
         <Row className="mb-3">
-          <Form.Group as={Col} md="4" controlId="school01">
+          <Form.Group as={Col} md="4">
             <Form.Label>School Name</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -81,7 +96,7 @@ class schoolInfoBuild extends React.Component {
               required
             />
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="school02">
+          <Form.Group as={Col} md="4">
             <Form.Label>Major</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -93,7 +108,7 @@ class schoolInfoBuild extends React.Component {
               required
             />
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="school03">
+          <Form.Group as={Col} md="4">
             <Form.Label>Date of Study</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -119,7 +134,7 @@ class schoolInfoBuild extends React.Component {
     );
     const schoolItems = (
       <>
-        <Items schoolInfo={schoolInfo} />
+        <Items schoolInfo={schoolInfo} onDelete={this.handleDelete} />
         <Button
           onClick={this.changeEditMode}
           variant="outline-primary"

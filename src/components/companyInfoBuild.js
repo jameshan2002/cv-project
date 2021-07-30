@@ -11,6 +11,21 @@ const Items = (props) => {
         <h5>{companyInfo.companyName}</h5>
         <p>{companyInfo.positionTitle}</p>
         <li>{companyInfo.mainTasks}</li>
+        {/* <Button
+          size="sm"
+          variant="secondary"
+          className="closeButton"
+          onClick={() => props.onClick()}
+        >
+          Edit
+        </Button> */}
+        <Button
+          size="sm"
+          variant="danger"
+          onClick={() => props.onDelete(companyInfo.id)}
+        >
+          Delete
+        </Button>
       </div>
     );
   });
@@ -29,6 +44,7 @@ class companyInfoBuild extends React.Component {
       },
       companyInfo: [],
       editMode: false,
+      editButtonPressed: false,
     };
   }
 
@@ -41,6 +57,11 @@ class companyInfoBuild extends React.Component {
         id: this.state.companyInfoInput.id,
       },
     });
+  };
+
+  handleDelete = (itemId) => {
+    const items = this.state.companyInfo.filter((item) => item.id !== itemId);
+    this.setState({ companyInfo: items });
   };
 
   onSubmitTask = (e) => {
@@ -58,7 +79,7 @@ class companyInfoBuild extends React.Component {
   };
 
   changeEditMode = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     this.setState((prevState) => ({
       editMode: !prevState.editMode,
     }));
@@ -69,7 +90,7 @@ class companyInfoBuild extends React.Component {
     const companyForm = (
       <Form onSubmit={this.onSubmitTask}>
         <Row className="mb-3">
-          <Form.Group as={Col} md="4" controlId="company01">
+          <Form.Group as={Col} md="4">
             <Form.Label>Company Name</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -81,7 +102,7 @@ class companyInfoBuild extends React.Component {
               required
             />
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="company02">
+          <Form.Group as={Col} md="4">
             <Form.Label>Position</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -93,7 +114,7 @@ class companyInfoBuild extends React.Component {
               required
             />
           </Form.Group>
-          <Form.Group as={Col} md="4" controlId="company03">
+          <Form.Group as={Col} md="4">
             <Form.Label>Main Task</Form.Label>
             <Form.Control
               onChange={this.handleChange}
@@ -121,7 +142,7 @@ class companyInfoBuild extends React.Component {
     );
     const companyItems = (
       <>
-        <Items companyInfo={companyInfo} />
+        <Items companyInfo={companyInfo} onDelete={this.handleDelete} />
         <Button
           onClick={this.changeEditMode}
           variant="outline-primary"
